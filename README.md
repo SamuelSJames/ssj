@@ -1,7 +1,6 @@
 # ssj
 
-your-github-username.github.io/
-│
+
 ├── index.html
 │
 ├── css/
