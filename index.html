@@ -7,29 +7,43 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/animations.css">
+    <script src="js/libs/typed.js" defer></script>
+    <script src="js/libs/smooth-scroll.js" defer></script>
+    <script src="js/components/dark-mode.js" defer></script>
+    <script src="js/components/menu-toggle.js" defer></script>
+    <script src="js/components/navbar.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="glassmorphism">
         <div class="container">
             <h1>Welcome to My Professional Profile</h1>
             <p>Tech Enthusiast | Public Speaker | Musician</p>
+            <button id="dark-mode-toggle" class="dark-mode-btn">Toggle Dark Mode</button>
         </div>
     </header>
     
     <nav class="sticky-nav">
+        <div class="menu-toggle">☰</div>
         <ul>
             <li><a href="sections/about.html" class="smooth-scroll">About</a></li>
             <li><a href="sections/music.html" class="smooth-scroll">Music</a></li>
             <li><a href="sections/it-skills.html" class="smooth-scroll">IT Skills</a></li>
             <li><a href="sections/speaking.html" class="smooth-scroll">Speaking</a></li>
         </ul>
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </nav>
     
     <main class="grid-layout">
         <section class="hero">
             <img src="assets/images/profile-pic.jpg" alt="Profile Picture" class="hover-zoom">
             <h2><span id="typed-text"></span></h2>
+        </section>
+        <section class="music-section">
+            <h2>Background Music</h2>
+            <audio controls loop>
+                <source src="assets/music/background-music.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
         </section>
     </main>
     
@@ -42,8 +56,5 @@
             <a href="#" class="icon-animate"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
         </div>
     </footer>
-    
-    <script src="js/typed.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>

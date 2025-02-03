@@ -1,0 +1,59 @@
+/* Forms.css - Defines styles for form elements */
+
+:root {
+    --form-bg: #ffffff;
+    --form-border: #ccc;
+    --form-focus-border: #007BFF;
+    --form-shadow: rgba(0, 0, 0, 0.1);
+    --form-padding: 12px;
+    --form-radius: 8px;
+}
+
+/* Base Form Styling */
+form {
+    background: var(--form-bg);
+    padding: 20px;
+    border-radius: var(--form-radius);
+    box-shadow: 0px 4px 10px var(--form-shadow);
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Input Fields */
+input, textarea, select {
+    width: 100%;
+    padding: var(--form-padding);
+    margin-bottom: 15px;
+    border: 1px solid var(--form-border);
+    border-radius: var(--form-radius);
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--form-focus-border);
+    box-shadow: 0px 0px 8px var(--form-focus-border);
+    outline: none;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background: var(--btn-bg);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: var(--form-radius);
+    transition: background 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background: var(--btn-hover-bg);
+}

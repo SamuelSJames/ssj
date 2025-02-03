@@ -1,0 +1,76 @@
+/* Colors.css - Defines the color palette for the website */
+
+:root {
+    --color-primary: #FF5733; /* Vibrant Orange-Red */
+    --color-secondary: #1E1E1E; /* Dark Gray */
+    --color-accent: #007BFF; /* Bright Blue */
+    --color-neutral: #F4F4F4; /* Soft White */
+    --color-hover: #FFC300; /* Bright Yellow-Gold */
+    
+    --background-gradient: linear-gradient(135deg, #FF5733, #FFC300);
+}
+
+/* Backgrounds */
+body {
+    background: var(--color-secondary);
+    color: var(--color-neutral);
+}
+
+.hero {
+    background: var(--background-gradient);
+    color: white;
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Buttons */
+button {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: var(--color-hover);
+    box-shadow: 0px 0px 10px var(--color-hover);
+}
+
+/* Links */
+a {
+    color: var(--color-accent);
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--color-hover);
+}
+
+/* Borders */
+.border-primary {
+    border: 2px solid var(--color-primary);
+}
+
+.border-accent {
+    border: 2px solid var(--color-accent);
+}
+
+/* Additional UI Enhancements */
+.card {
+    background: white;
+    color: var(--color-secondary);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}

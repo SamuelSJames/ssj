@@ -1,112 +1,56 @@
-/* Normalize.css will be included here if needed */
+/* Main.css - Global styles and layout adjustments */
 
-/* Main.css - Core Styles */
+@import url("base/normalize.css");
+@import url("base/typography.css");
+@import url("base/colors.css");
+@import url("layouts/header.css");
+@import url("layouts/footer.css");
+@import url("components/buttons.css");
+@import url("components/cards.css");
+@import url("components/forms.css");
+@import url("animations.css");
+
+/* General Page Styling */
 body {
-    font-family: Arial, sans-serif;
+    background-color: var(--color-secondary);
+    color: var(--font-color);
+    font-family: var(--font-primary);
+    line-height: var(--line-height-base);
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
-    color: white;
 }
 
 .container {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
+}
+
+/* Utility Classes */
+.text-center {
     text-align: center;
 }
 
-header.glassmorphism {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-nav.sticky-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.text-bold {
     font-weight: bold;
-    transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #f39c12;
+.hidden {
+    display: none;
 }
 
-button#dark-mode-toggle {
-    background: #f39c12;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
+/* Section Spacing */
+.section {
+    padding: 60px 20px;
 }
 
-button#dark-mode-toggle:hover {
-    background: #e67e22;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
 
-.grid-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh;
-    text-align: center;
-}
-
-.hero img.hover-zoom {
-    width: 200px;
-    border-radius: 50%;
-    transition: transform 0.3s;
-}
-
-.hero img.hover-zoom:hover {
-    transform: scale(1.1);
-}
-
-.icon-animate img {
-    width: 30px;
-    transition: transform 0.3s;
-}
-
-.icon-animate:hover img {
-    transform: rotate(15deg) scale(1.2);
-}
-
-.smooth-scroll {
-    scroll-behavior: smooth;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.social-icons a {
-    margin: 0 10px;
+    .section {
+        padding: 40px 15px;
+    }
 }

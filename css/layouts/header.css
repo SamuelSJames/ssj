@@ -1,0 +1,90 @@
+/* Header.css - Defines styles for the site header */
+
+:root {
+    --header-bg: rgba(255, 255, 255, 0.1); /* Glassmorphism */
+    --header-blur: blur(10px);
+    --header-text: white;
+    --header-hover: #FFC300;
+    --header-scrolled-bg: rgba(0, 0, 0, 0.9); /* Darker on Scroll */
+}
+
+/* Sticky Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--header-bg);
+    backdrop-filter: var(--header-blur);
+    color: var(--header-text);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out, padding 0.3s;
+}
+
+/* Scroll Effect */
+header.scrolled {
+    background: var(--header-scrolled-bg);
+    padding: 10px 40px;
+}
+
+/* Logo */
+.header-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Navigation Menu */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--header-text);
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: var(--header-hover);
+}
+
+/* Mobile Responsive Menu */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Responsive Behavior */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}

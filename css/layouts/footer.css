@@ -1,0 +1,48 @@
+/* Footer.css - Defines styles for the site footer */
+
+:root {
+    --footer-bg: #1E1E1E;
+    --footer-text: #F4F4F4;
+    --footer-hover: #FFC300;
+}
+
+/* Footer Styling */
+footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Footer Links */
+footer a {
+    color: var(--footer-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--footer-hover);
+}
+
+/* Social Media Icons */
+.footer-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-icons a img {
+    width: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-icons a:hover img {
+    transform: scale(1.2);
+}
